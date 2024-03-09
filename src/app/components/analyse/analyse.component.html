@@ -1,0 +1,14 @@
+<div class="flex-row" style="justify-content: space-between;">
+  <p-tabMenu [model]="items" [activeItem]="activeItem" (activeItemChange)="change($event)"></p-tabMenu>
+  <i class="button pi pi-replay" style="font-size: 2rem; color:#3B82F6" (click)="back()"></i>
+</div>
+
+@if(activeItem.label=='Data'){
+  <div style="margin:1rem 0; border: 1px solid #e5e7eb;">
+    <table-data></table-data>
+  </div>
+} @else if(activeItem.label=='Graphiques'){
+  <div style="margin:1rem 0; border : 1px solid #e5e7eb;">
+    <graph-data></graph-data>
+  </div>
+}

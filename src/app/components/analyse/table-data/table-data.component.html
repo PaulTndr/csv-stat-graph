@@ -1,0 +1,29 @@
+<p-table *ngIf="data" [value]="data.data" [(selection)]="selectedData" dataKey="nom" [tableStyle]="{'min-width': '50rem'}" (selectionChange)="selectionChange($event)">
+  <ng-template pTemplate="header">
+      <tr>
+          <th style="width: 4rem">
+              <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          </th>
+          @for (header of displayHeaders; track data) {
+            <th>{{ header  | titlecase}}</th>
+          }
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-line>
+      <tr>
+          <td>
+              <p-tableCheckbox [value]="line"></p-tableCheckbox>
+          </td>
+          @for (header of displayHeaders; track data) {
+            @if (header=='injections'){
+              <td>{{line[header].length}}</td>
+            } @else if(header=='debut'){
+              <td>{{ line[header] | date}}</td>
+            } @else{
+              <td>{{ line[header] }}</td>
+            }
+            
+          }
+      </tr>
+  </ng-template>
+</p-table>

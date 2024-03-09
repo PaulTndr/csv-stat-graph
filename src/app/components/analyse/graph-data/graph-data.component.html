@@ -1,0 +1,13 @@
+<div class="flex-row options" style="gap: 3rem;">
+  <div class="flex-row" style="gap: 0.5rem;">
+    <p-checkbox [(ngModel)]="graphOptions.patients" [binary]="true" inputId="binary" (onChange)="visualize()"></p-checkbox>
+    <p>Voir les patients</p>
+  </div>
+  <div class="flex-row" style="gap: 0.5rem;">
+    <p-checkbox [(ngModel)]="graphOptions.average" [binary]="true" inputId="binary" (onChange)="visualize()"></p-checkbox>
+    <p>Voir l'average</p>
+  </div>
+</div>
+<div class="chart">
+  <p-chart type="line" [data]="data" [options]="options"></p-chart>
+</div>
