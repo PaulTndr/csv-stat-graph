@@ -80,7 +80,7 @@ export class AnalyseService {
           nbr+=1
         }
       }
-      if(nbr==0){
+      if(nbr<5){
         intervalleAverage.push({index:l, value:null})
       } else {
         intervalleAverage.push({index:l, value:sum/nbr})

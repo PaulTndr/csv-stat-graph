@@ -64,6 +64,7 @@ export class ParserService {
     }
     data.push({...currentData})
     data.sort((d1,d2)=> d1.nom < d2.nom ? -1 : 1)
+    console.log(data)
     return new CsvData(headers, data);
   }
 

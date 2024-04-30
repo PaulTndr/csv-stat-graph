@@ -28,7 +28,8 @@ export class GraphDataComponent implements OnInit {
   graphData: any;
   graphOptions={
     patients:true,
-    average:true
+    average:true,
+    pertinentAverage:true,
   }
 
   constructor(private readonly dataService : DataService){}
