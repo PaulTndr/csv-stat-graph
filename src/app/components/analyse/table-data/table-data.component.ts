@@ -46,7 +46,7 @@ export class TableDataComponent implements OnInit {
     this.displayHeaders = [];
     switch(this.type){
       case 'vabysmo':
-        this.displayHeaders=['nom', 'prenom', 'sexe', 'age', 'indication', 'injections', 'fluide av', 'fluide ap', 'commentaire']
+        this.displayHeaders=['nom', 'prenom', 'sexe', 'age', 'indication', 'injections', 'amelio', 'fluide av', 'fluide ap', 'commentaire']
         break
       default:
         this.displayHeaders=data.headers
